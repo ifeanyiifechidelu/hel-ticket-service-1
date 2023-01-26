@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "c:\\Users\\lilian\\Desktop\\Efasa\\hel-ticket-service\\Hel-Ticket-Service.Infrastructure\\obj\\Debug\\net6.0\\project.razor.json",
-  "FilePath": "c:\\Users\\lilian\\Desktop\\Efasa\\hel-ticket-service\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
+  "SerializedFilePath": "c:\\Users\\lilian\\Desktop\\Efasa\\hel-ticket-service\\Hel-Ticket-Service.Api\\obj\\Debug\\net6.0\\project.razor.json",
+  "FilePath": "c:\\Users\\lilian\\Desktop\\Efasa\\hel-ticket-service\\Hel-Ticket-Service.Api\\Hel-Ticket-Service.Api.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18371,7 +18371,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "Hel_Ticket_Service.Infrastructure",
+  "RootNamespace": "Hel_Ticket_Service.Api",
   "Documents": [],
   "SerializationFormat": "0.3"
 }
