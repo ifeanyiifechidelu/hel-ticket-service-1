@@ -4,6 +4,7 @@ using Serilog;
 using System.Text.Json;
 using MongoDB.Bson;
 using System.Collections.Generic;
+using Hel_Ticket_Service.Domain.AppTicket.Contract;
 
 namespace Hel_Ticket_Service.Infrastructure;
 public class TicketRepository: ITicketRepository
@@ -163,6 +164,90 @@ public class TicketRepository: ITicketRepository
             // await _cacheProvider.SetToCache($"{page}",data,
             // TimeSpan.FromSeconds(30), TimeSpan.FromSeconds(10));
             return data;
+        }
+        catch (Exception e)
+        {
+            Log.Error("Error Searching Ticket: {0}", e.Message );
+            throw new AppException(new[]{e.Message}, "DATABASE",500);
+        }
+    }
+
+    public async Task<TicketsSummaryDto> GetTicketsSummary()
+    {
+        try
+        {
+            Log.Information("Getting ticket summary");
+        var data = await _cacheProvider.GetFromCache<TicketsSummaryDto>("ticket_summary"); // Get data from cache
+        if (data is not null) return data;
+
+        var openTickets = await _ticket.CountDocumentsAsync(ticket => ticket.Status == "OPEN");
+        var closedTickets = await _ticket.CountDocumentsAsync(ticket => ticket.Status == "CLOSED");
+        var activeTickets = await _ticket.CountDocumentsAsync(ticket => ticket.Status == "ACTIVE");
+        var escalatedTickets = await _ticket.CountDocumentsAsync(ticket => ticket.IsEscalted == true);
+
+
+        var totalSummary = new TicketsSummaryDto
+        {
+            TotalOpenTickets = (int)openTickets,
+            TotalClosedTickets = (int)closedTickets,
+            TotalActiveTickets = (int)activeTickets,
+            TotalEscalatedTickets = (int)escalatedTickets
+        };
+
+        await _cacheProvider.SetToCache("ticket_summary", totalSummary); // Set cache
+        return totalSummary;
+        }
+        catch (Exception e)
+        {
+            Log.Error("Error Searching Ticket: {0}", e.Message );
+            throw new AppException(new[]{e.Message}, "DATABASE",500);
+        }
+    }
+
+    public async Task<List<Ticket>> GetEscalatedTicketsByUser(string userreference, int page)
+    {
+        try
+        {
+            Log.Information("Getting escalated tickets for user {0}", page);
+        var data = await _cacheProvider.GetFromCache<List<Ticket>>("escalated_tickets_" + userreference); // Get data from cache
+        if (data is not null) return data;
+
+        var filterBuilder = Builders<Ticket>.Filter;
+            var ticketnameFilter = filterBuilder.Eq(ticket => ticket.UserReference, userreference);
+
+            var filter = ticketnameFilter;
+
+        data = await _ticket.Find(filter).Skip((page-1) * _dbProvider.GetPageLimit())
+            .Limit(_dbProvider.GetPageLimit()).ToListAsync();
+        //await _cacheProvider.SetToCache("escalated_tickets_" + reference, data); // Set cache
+
+        return data;
+        }
+        catch (Exception e)
+        {
+            Log.Error("Error Searching Ticket: {0}", e.Message );
+            throw new AppException(new[]{e.Message}, "DATABASE",500);
+        }
+    }
+
+    public async Task<List<Ticket>> GetEscalatedTicketsToAdmin(string reference, int page)
+    {
+        try
+        {
+            Log.Information("Getting escalated tickets assigned to user {0}", page);
+        var data = await _cacheProvider.GetFromCache<List<Ticket>>("escalated_tickets_assigned_" + reference); // Get data from cache
+        if (data is not null) return data;
+
+        var filterBuilder = Builders<Ticket>.Filter;
+            var ticketnameFilter = filterBuilder.Eq(ticket => ticket.AssignedTo, reference);
+
+            var filter = ticketnameFilter;
+
+        data = await _ticket.Find(filter).Skip((page-1) * _dbProvider.GetPageLimit())
+            .Limit(_dbProvider.GetPageLimit()).ToListAsync();
+        //await _cacheProvider.SetToCache("escalated_tickets_assigned_" + reference, data); // Set cache
+
+        return data;
         }
         catch (Exception e)
         {

@@ -1,31 +1,31 @@
 {
   "Version": 1,
-  "Hash": "ewaoVC0vZszjeAEGo7rofU4Fbh5nEfQL3QRkViNecZY=",
+  "Hash": "X5Kc4lSI5pis0yh8F+C24jo3TT3lIBBjrrWZUy1HU94=",
   "Source": "Hel-Ticket-Service.Api",
   "BasePath": "_content/Hel-Ticket-Service.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "c:\\Users\\lilian\\Desktop\\Efasa\\hel-ticket-service\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj",
+      "Identity": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj",
       "Version": 2,
       "Source": "Hel-Ticket-Service.Domain",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "C:\\Users\\lilian\\Desktop\\Efasa\\hel-ticket-service\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
+      "Identity": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
       "Version": 2,
       "Source": "Hel-Ticket-Service.Infrastructure",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }
   ],

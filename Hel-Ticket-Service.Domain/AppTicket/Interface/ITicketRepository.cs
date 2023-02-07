@@ -1,3 +1,5 @@
+using Hel_Ticket_Service.Domain.AppTicket.Contract;
+
 namespace Hel_Ticket_Service.Domain;
 
 public interface ITicketRepository{
@@ -10,7 +12,9 @@ public interface ITicketRepository{
     Task<List<Ticket>> GetTicketByCategoryReference(string categoryference, int page);
     //Task<List<Ticket>> GetTicketList(string name,int page);
     Task<List<Ticket>> SearchTicketList(string name,  int page);
-    
+    Task<TicketsSummaryDto> GetTicketsSummary();
+    Task<List<Ticket>> GetEscalatedTicketsByUser(string userreference, int page);
+    Task<List<Ticket>> GetEscalatedTicketsToAdmin(string name, int page);
     #endregion
 }
 

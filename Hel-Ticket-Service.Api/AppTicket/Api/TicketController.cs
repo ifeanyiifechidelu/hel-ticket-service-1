@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Hel_Ticket_Service.Domain;
+using Hel_Ticket_Service.Domain.AppTicket.Contract;
 
 namespace Hel_Ticket_Service.Api;
     [ApiController]
@@ -55,6 +56,29 @@ namespace Hel_Ticket_Service.Api;
                 return Ok( await _ticketRepository.SearchTicketList(name, page));
           
         }
-     
+
+        [HttpGet("summary")]
+        public async Task<ActionResult<TicketsSummaryDto>> GetTicketsSummary()
+        {
+            var result = await _ticketRepository.GetTicketsSummary();
+
+            return Ok(result);
+        }
+
+        [HttpGet("user/{page:int:min(1)}")]
+        public async Task<ActionResult<Ticket>> GetEscalatedTicketsByUser(string user, int page)
+        {
+            var result = await _ticketRepository.GetEscalatedTicketsByUser(user, page);
+
+            return Ok(result);
+        }
+
+        [HttpGet("admin/{page:int:min(1)}")]
+        public async Task<ActionResult<Ticket>> GetEscalatedTicketsToAdmin(string admin, int page)
+        {
+            var result = await _ticketRepository.GetEscalatedTicketsByUser(admin, page);
+
+            return Ok(result);
+        }
     }
 
