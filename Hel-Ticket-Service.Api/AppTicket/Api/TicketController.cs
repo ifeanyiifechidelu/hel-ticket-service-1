@@ -8,7 +8,7 @@ namespace Hel_Ticket_Service.Api;
     [Route("api/[controller]")]
     public class TicketController : ControllerBase
     {
-        readonly ITicketRepository _ticketRepository ; 
+        readonly ITicketRepository _ticketRepository ;
         readonly ITicketService _ticketService;
         public TicketController(ITicketRepository ticketRepository, ITicketService ticketService) {
             _ticketRepository = ticketRepository;
@@ -17,9 +17,7 @@ namespace Hel_Ticket_Service.Api;
         [HttpPost]
         public async Task<ActionResult<string>> CreateTicket([FromBody] CreateTicketDto createTicketDto)
         {
-            
                 return Ok (await _ticketRepository.CreateTicket(createTicketDto));
-            
         }
         [HttpPut("{reference}")]
         public async Task<ActionResult<string>> UpdateTicket(string reference,[FromBody] UpdateTicketDto updateTicketDto)

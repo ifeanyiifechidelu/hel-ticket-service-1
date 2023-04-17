@@ -6,5 +6,4 @@ namespace Hel_Ticket_Service.Domain;
 public interface IEBProvider
    {
       public ISubscriber Connect();
-     
    }

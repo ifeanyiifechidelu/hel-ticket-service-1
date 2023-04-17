@@ -25,4 +25,4 @@ public class CreateTicketValidator : AbstractValidator<CreateTicketDto>
             "Parameters must be in the required format and must not be null. Please stand advised.") })
             : base.Validate(context);
     }
-}  
+}

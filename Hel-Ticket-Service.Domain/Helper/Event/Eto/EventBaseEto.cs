@@ -31,5 +31,4 @@ public abstract class EventBaseEto<T> where T : class
         EventObjectID = eventObjectID;
         EventMessage = $"{EventObjectName} with ID: {EventObjectID} was {EventType} on {EventDate} by Category with ID: {EventCategoryID}";
     }
-    
 }

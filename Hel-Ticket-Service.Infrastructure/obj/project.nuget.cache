@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e4+xCta06mdVv4D6wEOubt8w8ULvPCygQlCajRGwHkdAPwiORY6AAoUFEXFzpz3Qx2EcQcCIL/CeBZpY0QkeVg==",
+  "dgSpecHash": "lRWyxcNOugb0iE4iZN7LDK+5/EMwFqZJoBaHTW8qDpcupU+2XD8unCfLQzdsK3QqEjRP5bm1ouxPQ0CWfcm75w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Decagon\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",

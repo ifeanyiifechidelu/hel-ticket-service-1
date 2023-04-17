@@ -14,7 +14,6 @@ public class TicketRepository: ITicketRepository
     readonly IDBProvider _dbProvider;
     readonly IMongoCollection<Ticket> _ticket; 
     readonly ITicketService _ticketService;
-  
     public TicketRepository(IConfiguration configuration,ICacheProvider cacheProvider, IDBProvider dbProvider, ITicketService ticketService)
     {
         _cacheProvider = cacheProvider;
@@ -25,7 +24,7 @@ public class TicketRepository: ITicketRepository
         _ticket =_dbProvider.Connect().GetCollection<Ticket>(nameof(Ticket).ToLower());
         var indexKeysDefinition = Builders<Ticket>.IndexKeys.Ascending(ticket => ticket.Title);
         _ticket.Indexes.CreateOneAsync(new CreateIndexModel<Ticket>(indexKeysDefinition,new CreateIndexOptions() { Unique = true }));
-        
+    
     }
     public async Task<string> CreateTicket(CreateTicketDto createTicketDto)
     {
@@ -33,8 +32,8 @@ public class TicketRepository: ITicketRepository
         {
             Log.Information("Validating input data {0} ...", createTicketDto);
             var validationError = _ticketService.ValidateCreateTicketDto(createTicketDto);
-            if (validationError!= null) 
-            {  
+            if (validationError!= null)
+            {
                 Log.Error("Error validating input data: " + JsonSerializer.Serialize(createTicketDto));
                 throw new AppException(validationError.ErrorData);
             }
@@ -117,7 +116,6 @@ public class TicketRepository: ITicketRepository
         }
     }
 
-       
     public async Task<List<Ticket>> GetTicketByCategoryReference(string categoryreference, int page)
     {
         try
@@ -128,7 +126,6 @@ public class TicketRepository: ITicketRepository
 
             var filterBuilder = Builders<Ticket>.Filter;
             var ticketnameFilter = filterBuilder.Eq(ticket => ticket.CategoryReference, categoryreference);
-
 
             var filter = ticketnameFilter;
 

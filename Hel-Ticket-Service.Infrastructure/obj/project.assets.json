@@ -4803,11 +4803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
       "projectName": "Hel-Ticket-Service.Infrastructure",
-      "projectPath": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\Hel-Ticket-Service.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4828,8 +4828,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj": {
-              "projectPath": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj"
+            "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj"
             }
           }
         }

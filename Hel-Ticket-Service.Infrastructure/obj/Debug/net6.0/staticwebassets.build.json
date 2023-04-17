@@ -1,20 +1,20 @@
 {
   "Version": 1,
-  "Hash": "PTJeK51weaG89N2wKWOagbMB3M8n/EE4JKa0FENYSKs=",
+  "Hash": "4Hgvfjt1/ABJJpdiZ3U8bImTqRHrjOrgWBo2i5EMgXg=",
   "Source": "Hel-Ticket-Service.Infrastructure",
   "BasePath": "_content/Hel-Ticket-Service.Infrastructure",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Decagon\\Desktop\\the_hel_Ticket_Service_2\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj",
+      "Identity": "C:\\Users\\Decagon\\Desktop\\stycc\\sytycc-projects\\Helpdesk\\ticket-service\\hel-ticket-service-1\\Hel-Ticket-Service.Domain\\Hel-Ticket-Service.Domain.csproj",
       "Version": 2,
       "Source": "Hel-Ticket-Service.Domain",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }
   ],

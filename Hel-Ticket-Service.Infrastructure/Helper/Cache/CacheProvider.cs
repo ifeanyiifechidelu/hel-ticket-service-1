@@ -12,7 +12,7 @@ namespace Hel_Ticket_Service.Infrastructure;
         public CacheProvider(IDistributedCache cache)
         {
             _cache = cache;
-            
+
         }
         public async Task<T?> GetFromCache<T>(string reference) where T : class
         {
